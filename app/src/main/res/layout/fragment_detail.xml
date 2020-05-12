@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".detail.DetailFragment">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.masscode.githubapi.detail.DetailViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ghAvatar"
+            showImage="@{viewModel.item.avatar_url}"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/hello_blank_fragment" />
+
+        <TextView
+            android:id="@+id/ghUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.username}" />
+
+        <TextView
+            android:id="@+id/ghBio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.item.bio}" />
+
+    </LinearLayout>
+
+</layout>
