@@ -18,7 +18,7 @@ class ItemAdapter(private val showDetail: (String) -> Unit) :
         return GithubViewHolder(
             ListItemBinding.inflate(
                 LayoutInflater.from(parent.context),
-                null,
+                parent,
                 false
             )
         )
